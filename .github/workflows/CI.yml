@@ -2,8 +2,8 @@ name: CI
 
 # Controls when the action will run. 
 on: 
-  push:
-  pull_request:
+  # push:
+  # pull_request:
   workflow_dispatch:
     inputs:
       debug_enabled:
@@ -80,4 +80,4 @@ jobs:
           file: ${{ env.images_dir }}/*.trx
           tag: ${{ github.ref }}
           overwrite: true
-          file_glob: true
+          file_glob: true     
